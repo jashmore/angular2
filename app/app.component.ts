@@ -1,5 +1,8 @@
 /**
  * Created by john on 10/07/2016.
+ *
+ * Note that it is best practice to include all application wide services inside here.
+ *
  */
 import { Component }       from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
@@ -21,7 +24,5 @@ import { HeroService }     from './hero.service';
   ]
 })
 export class AppComponent {
-  constructor() {
-
-  }
+  title = 'Tour of Heroes';
 }
