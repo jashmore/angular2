@@ -12,6 +12,8 @@ describe('AppComponent', function () {
   let comp: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
+
+  // This async beforeEach always completes before the second, synchronous beforeEach starts
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ AppComponent ],
@@ -28,11 +30,13 @@ describe('AppComponent', function () {
 
   it('should create component', () => expect(comp).toBeDefined() );
 
-  it('should have expected <h1> Tour of Heroes', () => {
+  it('should have expected <h2> Tour of Heroes', () => {
     fixture.detectChanges();
     const h1 = de.nativeElement;
 
     expect(h1.innerText).toMatch(/Tour of Heroes/i,
       '<h1> should say something about "Tour of Heroes"');
   });
+
+
 });
